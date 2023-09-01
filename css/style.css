@@ -1,0 +1,270 @@
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+/** Paleta de colores */
+:root {
+  --color_1: rgba(255, 255, 255);
+  --color_2: rgba(194, 194, 194);
+  --color_3: rgba(77, 77, 77);
+  --color_4: rgba(34, 34, 34);
+  --color_5: rgba(149, 218, 247);
+  --color_6: rgba(125, 158, 185, 1);
+  --color_7: rgba(125, 158, 138, 0.6);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+}
+
+/*! Incio del Header */
+
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 4rem;
+  padding: 0 5rem;
+  color: var(--color_4);
+  background-color: var(--color_6);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.header__logo {
+  width: 6rem;
+  cursor: pointer;
+}
+
+.header__logo:hover {
+  animation:vibrate 300ms infinite linear both;
+}
+
+.header__navbar {}
+
+.header__ul {
+  display: flex;
+  gap: 3rem;
+  width: 100%;
+}
+
+.header__li {
+  position: relative;
+}
+
+.header__a {
+  font-size: 1.2rem;
+  transition: transform 300ms ease;
+}
+
+.header__a:hover {
+  transform: scale(1.1);
+}
+
+/** --- Inicio Submenú desplegable ---  */
+
+.header__sub_ul {
+  position: absolute;
+  transition: opacity 500ms ease;
+}
+
+.header__sub_li {
+  top: 1.6rem;
+  left: -2rem;
+  position: relative;
+  overflow: hidden;
+  background: var(--color_6);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.header__sub_li:after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.header__sub_a {
+  font-size: 1rem;
+  padding: 1em 2em;
+}
+
+.header__sub_a:hover {
+  transform: scale(1.05);
+}
+
+/** --- Final Submenú desplegable ---  */
+
+/** --- Inicio Despliegue de submenú --- */
+
+.header__sub_ul,
+.header__sub_li {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.header__sub_li {
+  transition: .2s ease transform;
+}
+
+.header__li:hover .header__sub_ul,
+.header__li:hover .header__sub_li {
+  opacity: 1;
+  visibility: visible;
+}
+
+/** --- Final Despliegue de submenú --- */
+
+.header__button_cart {
+  transition: transform 300ms ease;
+  cursor: pointer;
+}
+
+.header__button_cart:hover {
+  transform: scale(1.1);
+}
+
+.header__cart {
+  width: 2.5rem;
+}
+
+/*! Final del Header */
+
+/*! Inicio del Main */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 8rem;
+  margin-bottom: 30rem;
+  background-color: var(--color_1);
+  box-sizing: border-box;
+}
+
+.main__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10rem;
+}
+
+.main__h1 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+
+
+.main__header_img {
+  /* display: none; */
+  width: 80%;
+  max-width: 35rem;
+  border-radius: 1rem;
+}
+
+.main__ul {
+  display: flex;
+  column-gap: 2rem;
+  font-size: 1rem;
+  margin-bottom: 5rem;
+}
+
+.main__li {}
+
+.main__products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 1rem;
+  width: 80%;
+  max-width: 700px;
+}
+
+.main__product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.main__product_img {}
+
+.main__product_description {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+  background-color: var(--color_6);
+}
+
+.main__product_title {
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.main__product_p {
+  font-size: 1rem;
+}
+
+.main__product_button {
+  height: 2rem;
+  border: 2px solid var(--color_1);
+  border-radius: 1rem;
+  cursor: pointer;
+  background-color: var(--color_1);
+  transition: background-color 300ms ease;
+}
+
+.main__product_button:hover {
+  background-color: var(--color_6);
+}
+
+/** --- Inicio del Footer --- */
+
+.footer {
+  width: 100%;
+  height: 10rem;
+  margin-top: 5rem;
+  background-color: var(--color_6);
+}
+
+/** --- Final del Footer --- */
+
+/*! Final del Main */
+
+/*! Inicio Animaciones */
+
+@keyframes vibrate {
+  0% {
+    transform:translate(0)
+  }
+  20% {
+    transform:translate(-2px,2px)
+  }
+  40% {
+    transform:translate(-2px,-2px)
+  }
+  60% {transform:translate(2px,2px)
+  } 
+  80% {
+    transform:translate(2px,-2px)
+  }
+  100% {transform:translate(0)
+  }
+}
+
+/*! Final Animaciones */
