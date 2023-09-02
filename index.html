@@ -8,6 +8,12 @@
 </head>
 <body>
 
+  <!--! Inicio animación de apertura -->
+  <!-- <div class="animation__container">
+    <img class="animation" src="./img/logo_adaptado.svg" alt="logo">
+  </div> -->
+  <!--! Final animación de apertura -->
+
   <div class="container">
 
   <!--! Inicio Header -->
@@ -36,12 +42,35 @@
         </li>
         </ul>
       </nav>
-      <button class="header__button_cart"><img class="header__cart" src="./img/cart.png" alt=""></button>
-  <!--! Inicio Mini cart -->
+      <button class="header__button_cart">
+        <img class="header__cart_img" src="./img/cart.png" alt="">
+      </button>
 
-
-
-  <!--! Final Mini cart -->
+  <!--! Inicio Cart -->
+      <div class="cart">
+        <h2 class="cart__title">Tus productos</h2>
+        <div class="cart__products__container">
+          <p class="cart__empty_p">Aún no has agregado productos. Añade algo!</p>
+          <img class="cart__empty_img" src="./img/cart-empty.png" alt="img_cart_empty">
+          <div class="cart__products">
+            <!-- Aquí se añaden los productos de la API a través del JavaScript -->
+            
+          </div>
+          <div class="cart__actions">
+            <div class="cart__actions_left">
+                <button class="cart__actions_empty">Vaciar carrito</button>
+            </div>
+            <div class="cart__actions_right">
+                <div class="cart__actions_total">
+                    <p class="cart__info_amount">Cantidad: 0</p>
+                    <p class="cart__info_total">Total $0</p>
+                </div>
+                <button class="cart__actions_buy">Comprar ahora</button>
+            </div>
+        </div>
+        </div>
+      </div>
+  <!--! Final Cart -->
 
     </header>
   <!--! Final Header-->
@@ -55,8 +84,14 @@
   <!--! Inicio Main -->
     <main class="main">
       <header class="main__header">
-        <h1 class="main__h1">Productos en oferta</h1>
-        <img class="main__header_img" src="./img/repuesto_1.jpg" alt="">
+        <h1 class="main__h1">Motor T3-mRT</h1>
+        <div class="main__header_galery">
+          <img class="left_arrow icon" src="./img/left_arrow.svg" alt="icon">
+          <img class="right_arrow icon" src="./img/right_arrow.svg" alt="icon">
+          <img class="main__header_img" src="./img/repuesto_1.jpg" alt="img_ofert">
+          <img class="main__header_subimg_1" src="./img/repuesto_2.jpg" alt="img_ofert">
+          <img class="main__header_subimg_2" src="./img/repuesto_3.jpg" alt="img_ofert">
+        </div>
       </header>
       <ul class="main__ul">
         <li class="main__li">Todos los productos</li>
@@ -64,34 +99,34 @@
         <li class="main__li">Modelo Y</li>
       </ul>
       <div class="main__products">
-        <div class="main__product">
+        <div id="1" class="main__product">
           <img class="main__product_img" src="./img/repuesto_2.jpg" alt="Img_repuesto">
           <div class="main__product_description">
             <h2 class="main__product_title">Nombre del producto</h2>
             <p class="main__product_p">Marca</p>
             <p class="main__product_p">Modelo</p>
             <p class="main__product_p">$1000</p>
-            <button class="main__product_button">AGREGAR</button>
+            <button id="1" class="main__product_button_add">AGREGAR</button>
           </div>
         </div>
-        <div class="main__product">
+        <div id="2" class="main__product">
           <img class="main__product_img" src="./img/repuesto_3.jpg" alt="Img_repuesto">
           <div class="main__product_description">
             <h2 class="main__product_title">Nombre del producto</h2>
             <p class="main__product_p">Marca</p>
             <p class="main__product_p">Modelo</p>
             <p class="main__product_p">$1000</p>
-            <button class="main__product_button">AGREGAR</button>
+            <button id="2" class="main__product_button_add">AGREGAR</button>
           </div>
         </div>
-        <div class="main__product">
+        <div id="3" class="main__product">
           <img class="main__product_img" src="./img/repuesto_4.jpg" alt="Img_repuesto">
           <div class="main__product_description">
             <h2 class="main__product_title">Nombre del producto</h2>
             <p class="main__product_p">Marca</p>
             <p class="main__product_p">Modelo</p>
             <p class="main__product_p">$1000</p>
-            <button class="main__product_button">AGREGAR</button>
+            <button id="3" class="main__product_button_add">AGREGAR</button>
           </div>
         </div>
       </div>
@@ -104,6 +139,7 @@
   <!--! Inicio Footer -->
 
   <!--! Final Footer -->
+
   </div>
 
   <script src="./js/main.js"></script>

@@ -1,0 +1,80 @@
+
+/*! Inicio animación de apertura */
+/* .animation__container {
+  z-index: 1000;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  animation:opacity 3000ms ease forwards;
+}
+
+.animation {
+  width: 80%;
+} */
+/*! Final animación de apertura */
+
+.container {
+  opacity: 0;
+  animation-delay: 3500ms;
+  animation: opacity_2 500ms ease forwards;
+}
+
+/*! Inicio keyframes */
+
+/** --- Inicio animación de apertura --- */
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+/** --- Final animación de apertura --- */
+
+/** --- Inicio animación aparición del contenido de la página --- */
+
+@keyframes opacity_2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/** --- Final animación aparición del contenido de la página --- */
+
+/** Inicio animación de vibración */
+
+@keyframes vibrate {
+  0% {
+    transform:translate(0)
+  }
+  20% {
+    transform:translate(-2px,2px)
+  }
+  40% {
+    transform:translate(-2px,-2px)
+  }
+  60% {transform:translate(2px,2px)
+  } 
+  80% {
+    transform:translate(2px,-2px)
+  }
+  100% {transform:translate(0)
+  }
+}
+
+/** Fianl animación de vibración */
+
+/*! Final Animaciones */
