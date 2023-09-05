@@ -22,24 +22,27 @@
       <nav class="header__navbar">
         <ul class="header__ul">
           <li class="header__li">
-            <a  class="header__a" href="#">Inicio</a>
+            <a  class="header__a" href="#">INICIO</a>
           </li>
           <li class="header__li">
-            <a  class="header__a" href="#">Elemento 2</a>
+            <a  class="header__a" href="#">PRODUCTOS</a>
             <ul class="header__sub_ul">
               <li class="header__sub_li"><a href="" class="header__sub_a">Subelemento</a></li>
               <li class="header__sub_li"><a href="" class="header__sub_a">Subelemento</a></li>
               <li class="header__sub_li"><a href="" class="header__sub_a">Subelemento</a></li>
             </ul>
           </li>
+          <li class="header__li">
+            <a  class="header__a" href="#">NOSOTROS</a>
+          </li>
           <li class="header__li"
-          ><a  class="header__a" href="#">Elemento 3</a>
-          <ul class="header__sub_ul">
+          ><a  class="header__a" href="#">CONTACTO</a>
+          <!-- <ul class="header__sub_ul">
             <li class="header__sub_li"><a href="" class="header__sub_a">Subelemento</a></li>
             <li class="header__sub_li"><a href="" class="header__sub_a">Subelemento</a></li>
             <li class="header__sub_li"><a href="" class="header__sub_a">Subelemento</a></li>
-          </ul>
-        </li>
+          </ul> -->
+          </li>
         </ul>
       </nav>
       <button class="header__button_cart">
@@ -50,7 +53,7 @@
       <div class="cart">
         <h2 class="cart__title">Tus productos</h2>
         <div class="cart__products__container">
-          <p class="cart__empty_p">Aún no has agregado productos. Añade algo!</p>
+          <p class="cart__empty_p">Aún no has agregado productos. ¡Añade algo!</p>
           <img class="cart__empty_img" src="./img/cart-empty.png" alt="img_cart_empty">
           <div class="cart__products">
             <!-- Aquí se añaden los productos de la API a través del JavaScript -->
@@ -83,16 +86,41 @@
 
   <!--! Inicio Main -->
     <main class="main">
+
+  <!-- Inicio del Header del Main -->
       <header class="main__header">
-        <h1 class="main__h1">Motor T3-mRT</h1>
-        <div class="main__header_galery">
-          <img class="left_arrow icon" src="./img/left_arrow.svg" alt="icon">
-          <img class="right_arrow icon" src="./img/right_arrow.svg" alt="icon">
-          <img class="main__header_img" src="./img/repuesto_1.jpg" alt="img_ofert">
-          <img class="main__header_subimg_1" src="./img/repuesto_2.jpg" alt="img_ofert">
-          <img class="main__header_subimg_2" src="./img/repuesto_3.jpg" alt="img_ofert">
+        <div class="main__header_degraded"></div>
+        <img class="main__header_img" src="./img/portada_1.jpg" alt="img_frond_page">
+        <div class="main__header_text">
+          <h3 class="main__header_h3">Marcas originales</h3>
+          <h2 class="main__header_h2">Adquiere los mejores repuestos <br> al mejor precio</h2>
+          <a class="main__header_buttom" href="#">VER CATÁLOGO</a>
         </div>
       </header>
+  <!-- Final del Header del Main -->
+
+  <!-- Inicio de la sección de ofertas -->
+      <section class="main__offers">
+        <h2 class="main__offers_h2">NUESTROS NUEVOS ARTÍCULOS</h2>
+        <h3 class="main__offers_h3">Motor T3-mRT</h3>
+        <div class="main__offers_galery">
+          <img class="left_arrow icon" src="./img/left_arrow.svg" alt="icon">
+          <img class="right_arrow icon" src="./img/right_arrow.svg" alt="icon">
+          <img class="main__offers_img" src="./img/repuesto_1.jpg" alt="img_ofert">
+          <img class="main__offers_subimg_left" src="./img/repuesto_2.jpg" alt="img_ofert">
+          <img class="main__offers_subimg_right" src="./img/repuesto_3.jpg" alt="img_ofert">
+        </div>
+      </section>
+  <!-- Final de la sección de ofertas -->
+  <!-- Inicio de la sección de marcas -->
+      <section class="main__brands">
+        <h2 class="main__brands_h2">LAS MARCAS QUE CONFIAN EN NOSOSTROS</h2>
+        <div class="main__brands_gallery">
+          <img class="main__brands_img" src="https://www.anesdor.com/wp-content/uploads/2018/06/180614-Panel-marcas-ANESDOR.png" alt="">
+          <p class="main__brands_p">Nos esforzamos cada día para aumentar la confianza de nuestros clientes trabajando junto a las mejores marcas </p>
+        </div>
+      </section>
+  <!-- Final de la sección de marcas -->
       <ul class="main__ul">
         <li class="main__li">Todos los productos</li>
         <li class="main__li">Marca X</li>
