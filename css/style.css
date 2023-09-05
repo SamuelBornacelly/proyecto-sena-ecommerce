@@ -288,6 +288,7 @@
   padding-top: 4rem;
   background-color: var(--color_1);
   box-sizing: border-box;
+  overflow-y: scroll;
 }
 
 .main__header {
@@ -603,6 +604,14 @@
     font-weight: 700;
   }
   /*? Final de la sección de marcas */
+
+  .main__products {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .main__product_img {
+    width: 80%;
+  }
 
 }
 
