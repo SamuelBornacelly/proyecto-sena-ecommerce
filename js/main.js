@@ -13,10 +13,14 @@ async function getApi() {
 function events() {
   const header__button_cart = document.querySelector(".header__button_cart");
   const cart = document.querySelector(".cart");
+  const modal = document.querySelector(".modal")
 
   // Menejo de la entrada y salida del Cart en pantalla
   header__button_cart.addEventListener("click", function () {
     cart.classList.toggle("displacement_left");
+  });
+  modal.addEventListener("click", function() {
+    modal.classList.remove("active")
   });
 
 }
@@ -26,7 +30,7 @@ function printProducts(db) {
   for (const product of db.products) {
     html += `
     <div class="main__product">
-          <img class="main__product_img" src="${product["image"]}" alt="Img_repuesto">
+          <img id="${product["id"]}" class="main__product_img modal_img" src="${product["image"]}" alt="Img_repuesto">
           <div class="main__product_description">
             <h2 class="main__product_title">${product["title"]}</h2>
             <div class="main__product_description_values">
@@ -190,6 +194,30 @@ function deleteCart(db) {
       totalCart(db);
   });
 }
+function modalProduct(db) {
+  const productsHTML = document.querySelector('.main__products');
+  const modal = document.querySelector(".modal");
+  const modal_product = document.querySelector(".modal_product");
+  productsHTML.addEventListener("click", function (event){
+    if (event.target.classList.contains("modal_img")) {
+      const id = Number(event.target["id"]);
+      const productFind = db.products.find (function(product) {
+        return product["id"] === id;
+      });
+      modal_product.innerHTML = `
+      <div class="modal__product_container">
+        <img class="modal__product__img" src="${productFind["image"]}" alt="">
+        <div class="modal__product_details">
+            <p class="modal__product_price">$${productFind["price"]}</p><p class="modal__product_stock">Stock: ${productFind["rating"]["count"]}</p>
+            <p class="modal__product_title">${productFind["title"]}</p>
+            <p class="modal__product_description">${productFind["description"]}</p>
+        </div>
+      </div>
+      `;
+      modal.classList.add("active");
+    }
+  });
+}
 
 async function main() {
   const db = {
@@ -213,6 +241,8 @@ async function main() {
   buyCart(db);
   // Elimina todos los artículos del Cart
   deleteCart(db);
+  // Se maneja el evento de la ventana modal
+  modalProduct(db);
 
 }
 
