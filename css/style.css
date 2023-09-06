@@ -775,7 +775,7 @@ footer .cart__actions_left {}
   }
 
   /*? Inicio Cart */
-  
+
   /*? Final Cart */
 
   /*? Inicio Header del Main */
@@ -873,7 +873,7 @@ footer .cart__actions_left {}
 
   .modal__product__img {
     object-fit: scale-down;
-    width: 80%;
+    width: 70%;
     max-width: 355px;
     max-height: 100%;
     border-radius: 1rem;
@@ -888,7 +888,7 @@ footer .cart__actions_left {}
   .modal__product_price {
     display: inline;
     vertical-align: middle;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 500;
     color: var(--color_2);
   }
