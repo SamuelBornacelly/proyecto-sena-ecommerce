@@ -192,7 +192,7 @@
   -webkit-backdrop-filter: blur(5px);
 }
 
-/** Inicio mensaje de Cart vacío */
+/** --- Inicio mensaje de Cart vacío --- */
 .cart__empty_p {
   position: absolute;
   text-align: center;
@@ -210,9 +210,9 @@
   transform: translate(-50%, -50%);
 }
 
-/** Final mensaje de Cart vacío */
+/** --- Final mensaje de Cart vacío --- */
 
-/** Inicio productos agregados al Cart */
+/** --- Inicio productos agregados al Cart --- */
 .cart__products {
   display: flex;
   flex-direction: column;
@@ -327,7 +327,9 @@
 }
 
 .cart__product_delete_icon {}
+/** --- Final productos agregados al Cart --- */
 
+/** --- Inicio opciones inferiores del Cart --- */
 .cart__actions {
   display: flex;
   justify-content: space-between;
@@ -386,8 +388,8 @@ footer .cart__actions_left {}
 .cart__actions_left:hover {
   transform: scale(1.05);
 }
+/** --- Final opciones inferiores del Cart --- */
 
-/** Inicio productos agregados al Cart */
 
 /*! Final Cart */
 
@@ -404,6 +406,7 @@ footer .cart__actions_left {}
   box-sizing: border-box;
 }
 
+/** --- Inicio del Header del Main --- */
 .main__header {
   position: relative;
   display: flex;
@@ -461,7 +464,9 @@ footer .cart__actions_left {}
   background-color: var(--color_4);
   cursor: pointer;
 }
+/** --- Final del Header del Main --- */
 
+/** --- Inicio de la sección de ofertas --- */
 .main__offers {
   display: flex;
   flex-direction: column;
@@ -533,7 +538,9 @@ footer .cart__actions_left {}
   border-radius: 1rem;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
+/** --- Final de la sección de ofertas --- */
 
+/** --- Inicio de la sección de marcas --- */
 .main__brands {
   margin-bottom: 3rem;
 }
@@ -569,7 +576,9 @@ footer .cart__actions_left {}
   line-height: 1em;
   color: var(--color_7);
 }
+/** --- Final de la sección de marcas --- */
 
+/** --- Inicio sección de productos --- */
 .main__ul {
   display: flex;
   column-gap: 2rem;
@@ -647,6 +656,7 @@ footer .cart__actions_left {}
 .main__product_button_add:hover {
   background-color: var(--color_6);
 }
+/** --- Final sección de productos --- */
 
 /** --- Inicio del Footer --- */
 
@@ -775,7 +785,17 @@ footer .cart__actions_left {}
   }
 
   /*? Inicio Cart */
+  .cart {
+    width: 90%;
+  }
 
+  .cart__product_delete_button {
+    transform: translate(30px);
+  }
+  
+  .cart__actions {
+    font-size: 7px;
+  }
   /*? Final Cart */
 
   /*? Inicio Header del Main */
