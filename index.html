@@ -36,7 +36,7 @@
             <a  class="header__a" href="#">NOSOTROS</a>
           </li>
           <li class="header__li"
-          ><a  class="header__a" href="#">CONTACTO</a>
+          ><a  class="header__a" href="#"></a>
           <!-- <ul class="header__sub_ul">
             <li class="header__sub_li"><a href="" class="header__sub_a">Subelemento</a></li>
             <li class="header__sub_li"><a href="" class="header__sub_a">Subelemento</a></li>
@@ -46,15 +46,16 @@
         </ul>
       </nav>
       <button class="header__button_cart">
-        <img class="header__cart_img" src="./img/cart.png" alt="">
+        <img class="header__cart_img" src="./img/cart.png" alt="icon_cart">
       </button>
+  <!--! Final Header -->
 
   <!--! Inicio Cart -->
       <div class="cart">
         <h2 class="cart__title">Tus productos</h2>
         <div class="cart__products__container">
-          <p class="cart__empty_p">Aún no has agregado productos. ¡Añade algo!</p>
-          <img class="cart__empty_img" src="./img/cart-empty.png" alt="img_cart_empty">
+          <p class="cart__empty_p visible">Aún no has agregado productos. ¡Añade algo!</p>
+          <img class="cart__empty_img visible" src="./img/cart-empty.png" alt="img_cart_empty">
           <div class="cart__products">
             <!-- Aquí se añaden los productos de la API a través del JavaScript -->
             
@@ -112,44 +113,16 @@
         </div>
       </section>
   <!-- Final de la sección de ofertas -->
-
+ <!-- Inicio Sección de productos -->
       <ul class="main__ul">
         <li class="main__li">Todos los productos</li>
         <li class="main__li">Marca X</li>
         <li class="main__li">Modelo Y</li>
       </ul>
       <div class="main__products">
-        <div id="1" class="main__product">
-          <img class="main__product_img" src="./img/repuesto_2.jpg" alt="Img_repuesto">
-          <div class="main__product_description">
-            <h2 class="main__product_title">Nombre del producto</h2>
-            <p class="main__product_p">Marca</p>
-            <p class="main__product_p">Modelo</p>
-            <p class="main__product_p">$1000</p>
-            <button id="1" class="main__product_button_add">AGREGAR</button>
-          </div>
-        </div>
-        <div id="2" class="main__product">
-          <img class="main__product_img" src="./img/repuesto_3.jpg" alt="Img_repuesto">
-          <div class="main__product_description">
-            <h2 class="main__product_title">Nombre del producto</h2>
-            <p class="main__product_p">Marca</p>
-            <p class="main__product_p">Modelo</p>
-            <p class="main__product_p">$1000</p>
-            <button id="2" class="main__product_button_add">AGREGAR</button>
-          </div>
-        </div>
-        <div id="3" class="main__product">
-          <img class="main__product_img" src="./img/repuesto_4.jpg" alt="Img_repuesto">
-          <div class="main__product_description">
-            <h2 class="main__product_title">Nombre del producto</h2>
-            <p class="main__product_p">Marca</p>
-            <p class="main__product_p">Modelo</p>
-            <p class="main__product_p">$1000</p>
-            <button id="3" class="main__product_button_add">AGREGAR</button>
-          </div>
-        </div>
+        
       </div>
+  <!-- Final Sección de productos -->
       <footer class="footer">
 
       </footer>
